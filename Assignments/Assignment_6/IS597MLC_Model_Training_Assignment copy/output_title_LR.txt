@@ -1,0 +1,104 @@
+
+************** Loading Data ************
+
+No of Rows: 50006
+No of Columns: 5
+
+Selecting columns needed for processing: pmid, title, abstract, rct
+
+No of rows (After dropping null): 50006
+No of columns: 4
+No of rows (After removing duplicates): 50006
+
+<Data View: First Few Instances>
+
+        pmid                                           sentence  label
+0  24900659  Probing the binding site of abl tyrosine kinas...      0
+1  29492752  Variability in Bariatric Surgical Care Among V...      0
+2  30574804  Maternal antibiotic prophylaxis affects Bifido...      0
+3  29679827  Environmental impact assessment of alfalfa (Me...      0
+4  30117518  Sandwiched spherical tin dioxide/graphene with...      0
+
+Class Counts(label, row): Total
+label
+0    40007
+1     9999
+Name: count, dtype: int64
+
+************** Spliting Data **************
+
+Train Data: (40004, 2)
+Val Data: (5001, 2)
+Test Data: (5001, 2)
+
+Class Counts(label, row): Train
+label
+0    32005
+1     7999
+Name: count, dtype: int64
+
+Class Counts(label, row): Val
+label
+0    4001
+1    1000
+Name: count, dtype: int64
+
+Class Counts(label, row): Test
+label
+0    4001
+1    1000
+Name: count, dtype: int64
+
+Data View: X Train
+           pmid                                           sentence
+23663  30472200  Prenatal propofol exposure downregulates NMDA ...
+40088  27385766  Protein N-terminal acetylation is required for...
+44930  24423084  Let's face it: facial emotion processing is im...
+
+Data View: X Val
+           pmid                                           sentence
+36841  31503331  Acute hemolytic transfusion reaction associate...
+21713  22902894  The role of ovarian hormones in sexual reward ...
+6131   29944726  In vitro cytotoxicity of superheated steam hyd...
+
+Data View: X Test
+           pmid                                           sentence
+36176  29095290  The pancreatic juice length in the stent tube ...
+668    26146239  Psychometric properties of the Patient Activat...
+18895  26206985  [Copeptin - stable C-terminal fragment of pre-...
+
+************** Pre-processed Data **************
+
+Train Data: (40004,)
+
+Data View: X Train
+0    prenat propofol exposur downregul nmda recepto...
+1    protein n-termin acetyl requir embryogenesi ar...
+2    let 's face : facial emot process impair bipol...
+Name: sentence, dtype: object
+
+************** Training Model: LR **************
+
+
+************** Getting predictions **************
+
+************** Evaluating performance **************
+
+************** Model Evaluation **************
+
+Confusion Matrix:
+
+[[3918   83]
+ [ 393  607]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+           0     0.9088    0.9793    0.9427      4001
+           1     0.8797    0.6070    0.7183      1000
+
+    accuracy                         0.9048      5001
+   macro avg     0.8943    0.7931    0.8305      5001
+weighted avg     0.9030    0.9048    0.8979      5001
+

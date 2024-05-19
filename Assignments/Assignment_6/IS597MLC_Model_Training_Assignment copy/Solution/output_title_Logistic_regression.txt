@@ -1,0 +1,165 @@
+************** Loading Data ************
+
+No of Rows: 50006
+No of Columns: 5
+
+Selecting columns needed for processing: pmid, title, rct
+
+No of rows (After dropping null): 50006
+No of columns: 3
+
+No of rows (After removing duplicates): 50006
+
+<Data View: First Few Instances>
+
+    pmid                                                                                                                               title  rct
+24900659                                                      Probing the binding site of abl tyrosine kinase using in situ click chemistry.    0
+29492752 Variability in Bariatric Surgical Care Among Various Centers: a Survey of All Bariatric Surgeons in the Province of Quebec, Canada.    0
+30574804        Maternal antibiotic prophylaxis affects Bifidobacterium spp. counts in the human milk, during the first week after delivery.    0
+29679827                                                     Environmental impact assessment of alfalfa (Medicago sativa L.) hay production.    0
+30117518        Sandwiched spherical tin dioxide/graphene with a three-dimensional interconnected closed pore structure for lithium storage.    0
+
+Class Counts(label, row): Total
+rct
+0    40007
+1     9999
+
+
+
+
+************** Splitting Data **************
+
+Train Data: (40004, 2)
+Val Data: (5001, 2)
+Test Data: (5001, 2)
+
+Class Counts(label, row): Train
+rct
+0    32005
+1     7999
+
+Class Counts(label, row): Validation
+rct
+0    4001
+1    1000
+
+Class Counts(label, row): Test
+rct
+0    4001
+1    1000
+
+Data View: X Train
+    pmid                                                                                                                   title
+30472200 Prenatal propofol exposure downregulates NMDA receptor expression and causes cognitive and emotional disorders in rats.
+27385766                                            Protein N-terminal acetylation is required for embryogenesis in Arabidopsis.
+24423084                                               Let's face it: facial emotion processing is impaired in bipolar disorder.
+
+Data View: X Val
+    pmid                                                                                                                                                                                                title
+31503331                                                                                            Acute hemolytic transfusion reaction associated with anti-Mta : case report and review of the literature.
+22902894                                                                                                                              The role of ovarian hormones in sexual reward states of the female rat.
+29944726 In vitro cytotoxicity of superheated steam hydrolyzed oligo((R)-3-hydroxybutyrate-co-(R)-3-hydroxyhexanoate) and characteristics of its blend with poly(L-lactic acid) for biomaterial applications.
+
+Data View: X Test
+    pmid                                                                                                                                                       title
+29095290 The pancreatic juice length in the stent tube as the predicting factor of clinical relevant postoperative pancreatic fistula after pancreaticoduodenectomy.
+26146239          Psychometric properties of the Patient Activation Measure-13 among out-patients waiting for mental health treatment: A validation study in Norway.
+26206985                                                           [Copeptin - stable C-terminal fragment of pre-provasopressin as a new stress marker in newborns].
+
+************** Resetting Index **************
+
+Train Data: (40004, 2)
+Validation Data: (5001, 2)
+Test Data: (5001, 2)
+
+Class Counts(label, row): Train
+rct
+0    32005
+1     7999
+
+Class Counts(label, row): Validation
+rct
+0    4001
+1    1000
+
+Class Counts(label, row): Test
+rct
+0    4001
+1    1000
+
+Data View: X Train
+    pmid                                                                                                                   title
+30472200 Prenatal propofol exposure downregulates NMDA receptor expression and causes cognitive and emotional disorders in rats.
+27385766                                            Protein N-terminal acetylation is required for embryogenesis in Arabidopsis.
+24423084                                               Let's face it: facial emotion processing is impaired in bipolar disorder.
+
+Data View: X Val
+    pmid                                                                                                                                                                                                title
+31503331                                                                                            Acute hemolytic transfusion reaction associated with anti-Mta : case report and review of the literature.
+22902894                                                                                                                              The role of ovarian hormones in sexual reward states of the female rat.
+29944726 In vitro cytotoxicity of superheated steam hydrolyzed oligo((R)-3-hydroxybutyrate-co-(R)-3-hydroxyhexanoate) and characteristics of its blend with poly(L-lactic acid) for biomaterial applications.
+
+Data View: X Test
+    pmid                                                                                                                                                       title
+29095290 The pancreatic juice length in the stent tube as the predicting factor of clinical relevant postoperative pancreatic fistula after pancreaticoduodenectomy.
+26146239          Psychometric properties of the Patient Activation Measure-13 among out-patients waiting for mental health treatment: A validation study in Norway.
+26206985                                                           [Copeptin - stable C-terminal fragment of pre-provasopressin as a new stress marker in newborns].
+
+
+
+
+************** Pre-processed Data **************
+
+Data Shape: (40004,)
+
+Data View:
+prenat propofol exposur downregul nmda receptor...
+protein n-termin acetyl requir embryogenesi ara...
+let 's face : facial emot process impair bipola...
+
+************** Pre-processed Data **************
+
+Data Shape: (5001,)
+
+Data View:
+acut hemolyt transfus reaction associ anti-mta ...
+role ovarian hormon sexual reward state femal r...
+vitro cytotox superh steam hydrolyz oligo ( ( r...
+
+************** Pre-processed Data **************
+
+Data Shape: (5001,)
+
+Data View:
+pancreat juic length stent tube predict factor ...
+psychometr properti patient activ measure-13 am...
+[ copeptin - stabl c-termin fragment pre-provas...
+
+************** Training Model: Logistic_regression **************
+
+Model fitted successfully!
+
+
+************** Getting predictions **************
+
+
+************** Evaluating performance **************
+
+
+************** Model Evaluation **************
+
+Confusion Matrix:
+[[3918   83]
+ [ 393  607]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+           0       0.98      0.91      0.94      4311
+           1       0.61      0.88      0.72       690
+
+    accuracy                           0.90      5001
+   macro avg       0.79      0.89      0.83      5001
+weighted avg       0.93      0.90      0.91      5001
+
